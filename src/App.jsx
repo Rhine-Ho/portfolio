@@ -1,16 +1,12 @@
-import { Navbar, Home, Eggdrop, Footer } from "./components"; 
+//import { useState } from 'react'
+
 
 function App() {
+ 
 
   return (
     <>
-      <div>
-        <Navbar/>
-        <Home />
-        <Eggdrop />
-        <Footer />
-      
-      </div>
+    
     </>
   )
 }
