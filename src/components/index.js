@@ -5,6 +5,7 @@ import Eggdrop from "./Eggdrop";
 import About from "./about";
 //import Contact from "./contact";
 import Footer from "./works";
+import Loader from "./loader";
 
 export {
   Navbar,
@@ -14,4 +15,5 @@ export {
   About,
   //Contact,
   Footer,
+  Loader,
 };
