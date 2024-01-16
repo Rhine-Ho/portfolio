@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { INFO } from '../constants'; // Assuming INFO is your data array
+import { INFO } from '../constants'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,11 +12,10 @@ const About = () => {
     const container = containerRef.current;
     const cards = container.children;
 
-    // Calculate total width of all cards
-    const totalWidth = cards.length * 200; // 調整成比原先更小的數值
+    const totalWidth = cards.length * 200;
 
     gsap.to(cards, {
-      xPercent: -40 * (cards.length - 1), // Negative value for left-to-right scrolling
+      xPercent: -40 * (cards.length - 1), 
       ease: 'none',
       scrollTrigger: {
         trigger: container,
