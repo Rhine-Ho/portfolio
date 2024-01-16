@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import About from './about';
+import { Rhine } from '../assets';
 
 
 const Eggdrop = () => {
@@ -20,12 +21,12 @@ const Eggdrop = () => {
     const preloadImages = async () => {
       for (let i = 1; i <= frameCount; i++) {
         const img = new Image();
-        img.src = (await import(`../assets/file/${i}.jpg`)).default; // 使用 import 引入圖片
+        img.src = (await import(`../assets/file/${i}.jpg`)).default;
         images.push(img);
       }
     };
 
-    preloadImages(); // 預加載圖片
+    preloadImages(); 
 
     const render = () => {
       context.clearRect(0, 0, canvas.width, canvas.height);
@@ -56,8 +57,7 @@ const Eggdrop = () => {
 
     return () => {
       window.removeEventListener('resize', resizeHandler);
-      // 在組件卸載時清除事件監聽和可能的動畫
-      // 清除可能的動畫暫停 ScrollTrigger
+    
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
 
@@ -72,7 +72,7 @@ const Eggdrop = () => {
             </div>
 
           <div id="Don't-hesitate" className="absolute w-1/2 h-1/3 z-10 -translate-y-96 translate-x-64 py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
-            <img className="w-[125px] block mx-auto h-32 rounded-full sm:mx-0 sm:shrink-0" src="./src/assets/Rhine.jpg" alt="Rhine" />
+            <img className="w-[125px] block mx-auto h-32 rounded-full sm:mx-0 sm:shrink-0" src={Rhine} alt="Rhine" />
             <div className="text-center space-y-2 sm:text-left">
                 <div className="space-y-0.5">
                     <p className="text-lg text-black font-semibold">
