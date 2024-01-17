@@ -6,32 +6,27 @@ import { INFO } from '../constants';
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const containerRef = useRef(null);
+  const container = useRef(null);
 
   useEffect(() => {
-    const container = containerRef.current;
-    const cards = container.children;
-
-    const totalWidth = cards.length * 200;
-
-    gsap.to(cards, {
-      xPercent: -40 * (cards.length - 1), 
-      ease: 'none',
+    gsap.to(container,
+      { opacity: 0, x: '100%' },
+      {
       scrollTrigger: {
+        opacity: 1,
         trigger: container,
-        start: 'top top',
-        end: `+=${totalWidth}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        markers: true,
+        scrub: true
+      }
+     [container],
 
-      },
-    });
+    })
+    
+
+   
   }, []);
 
   return (
-    <div ref={containerRef} className="flex flex-row gap-6 w-full justify-center">
+    <div ref={container} className="flex flex-row gap-6 w-full justify-center">
       {INFO.map((item, index) => (
         <div
           key={item.id}
