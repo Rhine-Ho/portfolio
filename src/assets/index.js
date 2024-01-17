@@ -7,7 +7,7 @@ import water from "./water.png";
 import Github from "./github.svg";
 import linkedin from "./linkedin.png";
 import gmail from "./gmail.png";
-import Rhine from "./Rhine.jpg";
+import Rhine from "./rhine.JPG";
 
 
 
