@@ -72,7 +72,8 @@ const Eggdrop = () => {
             </div>
 
           <div id="Don't-hesitate" className="absolute w-1/2 h-1/3 z-10 -translate-y-96 translate-x-64 py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
-            <img className="w-[125px] block mx-auto h-32 rounded-full sm:mx-0 sm:shrink-0" src={Rhine} alt="Rhine" />
+            <img className="w-[125px] block mx-auto h-32 rounded-full sm:mx-0 sm:shrink-0"
+             src='https://rhine-ho.github.io/portfolio/src/assets/Rhine.jpg' alt="Rhine" />
             <div className="text-center space-y-2 sm:text-left">
                 <div className="space-y-0.5">
                     <p className="text-lg text-black font-semibold">
