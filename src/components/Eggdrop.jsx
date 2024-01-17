@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import About from './about';
-import Rhine from '../assets/rhine.JPG';
+import Rhine from '../assets/Rhine.jpg';
 
 
 const Eggdrop = () => {
